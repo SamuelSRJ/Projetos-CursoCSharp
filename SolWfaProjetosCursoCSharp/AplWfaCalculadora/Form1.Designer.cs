@@ -50,6 +50,7 @@
             this.txtOperacao.Name = "txtOperacao";
             this.txtOperacao.Size = new System.Drawing.Size(199, 20);
             this.txtOperacao.TabIndex = 0;
+            this.txtOperacao.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOperacao_KeyDown);
             // 
             // btnCalcular
             // 
