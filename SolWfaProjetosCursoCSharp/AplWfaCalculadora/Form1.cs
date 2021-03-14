@@ -95,10 +95,13 @@ namespace AplWfaCalculadora
             }
 
             // APRESENTACAO DO RESULTADO
-            MessageBox.Show("O resultado é: " + res, "RESULTADO");
+            if (res == -1111111111)
+                MessageBox.Show("ERRO!");
+            else
+                MessageBox.Show("O resultado é: " + res, "RESULTADO");
 
-            // LIMPAR TEXTBOX   
-            txtOperacao.Clear();
+                // LIMPAR TEXTBOX   
+                txtOperacao.Clear();
         }
 
         private void txtOperacao_KeyDown(object sender, KeyEventArgs e)
@@ -112,6 +115,8 @@ namespace AplWfaCalculadora
             // ANALISA SE ENTER FOI ACIONADO
             if (e.KeyCode == Keys.Return)
                 btnCalcular_Click(btnCalcular, EventArgs.Empty);
+            else if (e.KeyCode == Keys.Escape)
+                txtOperacao.Clear();
         }
     }
 }
