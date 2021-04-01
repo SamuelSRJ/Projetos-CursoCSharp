@@ -15,12 +15,32 @@ namespace AplWfaAgenda
         public frmInserirEditar()
         {
             InitializeComponent();
+            ConstroiLista();
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
             // FECHA O FORMULARIO
             this.Close();
+        }
+
+        private void frmInserirEditar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public void ConstroiLista()
+        {
+            // ADICIONA À LISTA DE CONTATOS OS CONTATOS REGISTRADOS
+            lstContatos.Items.Clear();
+
+            foreach (cl_Contato contato in cl_Geral.LISTA_CONTATOS)
+            {
+                lstContatos.Items.Add(contato.nome + " (" + contato.numero+")");
+            }
+
+            // ATUALIZA O NUMERO DE REGISTROS
+            lblNumRegistros.Text = "Nº de Contatos: " + lstContatos.Items.Count;
         }
     }
 }

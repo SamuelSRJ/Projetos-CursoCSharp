@@ -36,7 +36,7 @@
             this.btnGravar = new System.Windows.Forms.Button();
             this.lstContatos = new System.Windows.Forms.ListBox();
             this.lblMessage2 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNumRegistros = new System.Windows.Forms.Label();
             this.btnApagar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -113,14 +113,14 @@
             this.lblMessage2.Text = "LISTA DE CONTATOS SALVOS:";
             this.lblMessage2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // lblNumRegistros
             // 
-            this.label2.Location = new System.Drawing.Point(18, 361);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(264, 23);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Nº de Contatos: 0";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNumRegistros.Location = new System.Drawing.Point(18, 361);
+            this.lblNumRegistros.Name = "lblNumRegistros";
+            this.lblNumRegistros.Size = new System.Drawing.Size(264, 23);
+            this.lblNumRegistros.TabIndex = 7;
+            this.lblNumRegistros.Text = "Nº de Contatos: 0";
+            this.lblNumRegistros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnApagar
             // 
@@ -150,7 +150,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnApagar);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblNumRegistros);
             this.Controls.Add(this.lblMessage2);
             this.Controls.Add(this.lstContatos);
             this.Controls.Add(this.btnGravar);
@@ -165,6 +165,7 @@
             this.Name = "frmInserirEditar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AGENDA - INSERIR / EDITAR";
+            this.Load += new System.EventHandler(this.frmInserirEditar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,7 +181,7 @@
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.ListBox lstContatos;
         private System.Windows.Forms.Label lblMessage2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNumRegistros;
         private System.Windows.Forms.Button btnApagar;
         private System.Windows.Forms.Button btnEditar;
     }

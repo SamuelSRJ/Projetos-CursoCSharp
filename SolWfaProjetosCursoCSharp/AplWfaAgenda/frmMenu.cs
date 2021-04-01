@@ -16,6 +16,9 @@ namespace AplWfaAgenda
         {
             InitializeComponent();
 
+            // CARREGA OS CONTATOS
+            cl_Geral.ConstroiListaContatos();
+
             // Apresenta versão do programa
             lblVersao.Text = cl_Geral.versão;
         }

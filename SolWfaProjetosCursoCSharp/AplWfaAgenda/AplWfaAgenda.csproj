@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cl_Contato.cs" />
     <Compile Include="cl_Geral.cs" />
     <Compile Include="frmInserirEditar.cs">
       <SubType>Form</SubType>
