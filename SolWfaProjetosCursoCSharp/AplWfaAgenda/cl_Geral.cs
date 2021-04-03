@@ -46,5 +46,18 @@ namespace AplWfaAgenda
                 ficheiro.Dispose();
             }
         }
+
+        public static void GravarNovoRegistro (string _nome, string _numero)
+        {
+            // GRAVAR UM NOVO REGISTRO (na lista e no ficheiro)
+
+            // GRAVA NA LISTA
+            cl_Contato novo = new cl_Contato();
+            novo.nome = _nome;
+            novo.numero = _numero;
+            LISTA_CONTATOS.Add(novo);
+
+            LISTA_CONTATOS.Add(new cl_Contato() { nome = _nome, numero = _numero });
+        }
     }
 }

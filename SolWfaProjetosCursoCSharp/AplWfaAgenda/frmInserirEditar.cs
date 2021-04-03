@@ -42,5 +42,17 @@ namespace AplWfaAgenda
             // ATUALIZA O NUMERO DE REGISTROS
             lblNumRegistros.Text = "Nº de Contatos: " + lstContatos.Items.Count;
         }
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            // INSERE UM NOVO REGISTRO NA LISTA
+
+            // VERIFICA SE TODOS OS CAMPOS ESTÃO PREENCHIDOS
+            if(txtNome.Text == "" || txtNumero.Text == "")
+            {
+                MessageBox.Show("Preencha todos os campos corretamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
     }
 }
