@@ -57,6 +57,7 @@ namespace AplWfaAgenda
             novo.numero = _numero;
             LISTA_CONTATOS.Add(novo);
 
+
             LISTA_CONTATOS.Add(new cl_Contato() { nome = _nome, numero = _numero });
         }
     }
